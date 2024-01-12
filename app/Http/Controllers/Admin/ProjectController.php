@@ -77,10 +77,10 @@ class ProjectController extends Controller
         // aggiungo slug al formdata
         $formData['slug'] = $slug;
         // prendiamo l'id dell'utente che sta facendo l'operazione
-        $formData['user_id'] = $project->user_id();
+        $formData['user_id'] = $project->user_id;
         // aggiungiamo l'id dell'utente
         $project->update($formData);
-        $project = Project::create($formData);
+        // $project = Project::create($formData);
         return redirect()->route('admin.projects.show', $project->id);
     }
 
