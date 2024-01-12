@@ -15,8 +15,8 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        $posts = Project::all();
-        return view ('admin.posts.index', compact('projects'));
+        $projects = Project::all();
+        return view ('admin.projects.index', compact('projects'));
 
     }
 
@@ -45,7 +45,7 @@ class ProjectController extends Controller
         // aggiungiamo l'id dell'utente
         $formData['user_id'] = $userId;
         $project = Project::create($formData);
-        return redirect()->route('admin.posts.show', $project->id);
+        return redirect()->route('admin.projects.show', $project->id);
     }
 
     /**
