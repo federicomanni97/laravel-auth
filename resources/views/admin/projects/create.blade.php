@@ -21,14 +21,17 @@
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
         </div>
-        <div class="mb-3">
-            <label for="image">Image</label>
+        <div>
+            <img id="uploadPreview" src="https://via.placeholder.com/300x200" alt="Placeholder">
+        </div>
+        <div class="my-3">
+            <label class="my-1" for="image">Image</label>
             <input type="file" class="form-control @error('title') is-invalid @enderror" name="image" id="image" value="{{old('image')}}">
             @error('image')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
         </div>
-        <button type="submit" class="btn btn-primary">Save</button>
+        <button type="submit" class="btn btn-success">Save</button>
         <button type="reset" class="btn btn-primary">Reset</button>
     </form>
 </section>

@@ -46,6 +46,7 @@ class ProjectController extends Controller
         // aggiungiamo l'id dell'utente
         $formData['user_id'] = $userId;
         if ($request->hasFile('image')) {
+
             $img_path = Storage::put('uploads', $request->image);
             $formData['image'] = $img_path;    
         }
@@ -95,6 +96,9 @@ class ProjectController extends Controller
     public function destroy(Project $project)
     {
         //
+        if ($project->image) {
+            Storage::delete('$post->image');
+        }
         $project->delete();
         return to_route('admin.projects.index')->with('message', 'Post $project->title Eliminato Correttamente');
     }
