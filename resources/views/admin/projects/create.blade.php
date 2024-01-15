@@ -1,12 +1,11 @@
 @extends('layouts.app')
 @section('content')
 <section class="container">
-    <h1>Post Create</h1>
-    <p>section content</p>
+    <h2 class="text-primary mt-3">Post Creator</h2>
     <form action="{{route('admin.projects.store')}}" enctype="multipart/form-data" method="POST">
         @csrf
         <div class="mb-3">
-            <label for="title">Title</label>
+            <label for="title" class="my-2">Title</label>
             <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" id="title"
                 required maxlength="200" minlength="3" value="{{old('title')}}">
             @error('title')
@@ -14,7 +13,7 @@
             @enderror
         </div>
         <div class="mb-3">
-            <label for="body">Body</label>
+            <label for="body" class="my-2">Body</label>
             <textarea type="text" class="form-control @error('title') is-invalid @enderror" name="body" id="body"
                 required maxlength="200" minlength="3" value="{{old('body')}}"></textarea>
             @error('body')
