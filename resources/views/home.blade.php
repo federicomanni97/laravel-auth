@@ -1,8 +1,9 @@
 @extends('layouts.app')
 @section('content')
+<div>
     <section class="container">
-        <div class="my-3">
-            <h1>Projects</h1>
+        <div class="bghome text-uppercase">
         </div>
     </section>
+</div>
 @endsection

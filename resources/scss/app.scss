@@ -9,6 +9,22 @@ $fa-font-path: "../fonts/webfonts" !default;
 
 @import '~bootstrap/scss/bootstrap';
 
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
 h1 {
     color: $text-color;
+}
+
+.bghome{
+    background-image: url(/public/imgpublic/pexels-stefano-gatti.jpg);
+    width: auto;
+    height: calc(100vh - 63px);
+    background-size: cover;
+}
+
+.colortitle{
+    color: rgb(217, 255, 0);
+    font-size: 150px;
 }

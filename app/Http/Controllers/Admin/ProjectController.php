@@ -8,6 +8,7 @@ use App\Http\Requests\StoreProjectRequest;
 use App\Http\Requests\UpdateProjectRequest;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 class ProjectController extends Controller
 {
     /**
@@ -44,6 +45,10 @@ class ProjectController extends Controller
         $userId = Auth::id();
         // aggiungiamo l'id dell'utente
         $formData['user_id'] = $userId;
+        if ($request->hasFile('image')) {
+            $img_path = Storage::put('uploads', $request->image);
+            $formData['image'] = $img_path;    
+        }
         $project = Project::create($formData);
         return redirect()->route('admin.projects.show', $project->id);
     }
