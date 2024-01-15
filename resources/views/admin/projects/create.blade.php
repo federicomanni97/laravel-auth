@@ -21,7 +21,7 @@
             @enderror
         </div>
         <div>
-            <img id="uploadPreview" src="https://via.placeholder.com/300x200" alt="Placeholder">
+            <img id="uploadPreview" src="https://via.placeholder.com/300x200" alt="PlaceHolder">
         </div>
         <div class="my-3">
             <label class="my-1" for="image">Image</label>

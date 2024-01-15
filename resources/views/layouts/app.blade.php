@@ -36,7 +36,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto p-0">
                         <li class="nav-item">
-                            <a class="fs-2 nav-link" href="{{url('/') }}">{{ __('Home') }}</a>
+                            <a class="fs-2 p-0 nav-link" href="{{url('/') }}">{{ __('Home') }}</a>
                         </li>
                     </ul>
 
